@@ -101,9 +101,9 @@ BOARD_SEPOLICY_DIRS := \
 BOARD_CUSTOM_BOOTIMG_MK := device/lge/hammerhead/mkbootimg.mk
 
 # Define kernel config for inline building
-TARGET_KERNEL_CONFIG := cyanogenmod_hammerhead_defconfig
+TARGET_KERNEL_CONFIG := hammerhead_defconfig
 TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := prebuilts/gcc/linux-86/arm/LINARO-HAMMER/bin/arm-eabi-
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7-13.04/bin/arm-linux-gnueabihf-
 
 # The list below is order dependent
 BOARD_SEPOLICY_UNION := \
@@ -115,8 +115,6 @@ HAVE_ADRENO_SOURCE:= false
 
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
-
-TARGET_TOUCHBOOST_FREQUENCY:= 1200
 
 # Recovery
 RECOVERY_FSTAB_VERSION := 2
