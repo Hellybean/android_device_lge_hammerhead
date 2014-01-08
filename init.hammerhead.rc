@@ -269,6 +269,7 @@ on charger
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
     start mpdecision
+    start lsbootscript
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
@@ -469,4 +470,10 @@ service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
+
+service bsbootscript /sbin/bsbootscript.sh
+    class late_start
+        user root
+        disabled
+    oneshot
 
